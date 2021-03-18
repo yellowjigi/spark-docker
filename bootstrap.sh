@@ -3,6 +3,9 @@
 # Start sshd
 sudo /etc/init.d/ssh start
 
+# Default user password
+echo hadoop:hadoop | sudo chpasswd
+
 # Start hdfs daemons
 ${HADOOP_HOME}/sbin/hadoop-daemon.sh start datanode
 ${HADOOP_HOME}/sbin/hadoop-daemon.sh start namenode
