@@ -17,7 +17,7 @@
 <!-- Site specific YARN configuration properties -->
 	<property>
 		<name>yarn.resourcemanager.hostname</name>
-		<value>localhost</value>
+		<value>0.0.0.0</value>
 	</property>
 	<property>
 		<name>yarn.nodemanager.log-dirs</name>

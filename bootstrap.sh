@@ -14,6 +14,8 @@ ${HADOOP_HOME}/sbin/hadoop-daemon.sh start namenode
 HADOOP_SSH_OPTS="-o StrictHostKeyChecking=accept-new" ${HADOOP_HOME}/sbin/yarn-daemons.sh start nodemanager
 ${HADOOP_HOME}/sbin/yarn-daemon.sh start resourcemanager
 
+hdfs dfs -mkdir -p /tmp /hadoop/tmp /hadoop/yarn/app-logs
+
 if [ "${1}" = "-d" ] || [ "${1}" = "--daemon" ]; then
 	while true; do
 		sleep 1000;
